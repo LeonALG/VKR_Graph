@@ -1,0 +1,162 @@
+object MainForm: TMainForm
+  Left = 543
+  Height = 844
+  Top = 50
+  Width = 1922
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'MainForm'
+  ClientHeight = 844
+  ClientWidth = 1922
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object Memo: TMemo
+    Left = 30
+    Height = 572
+    Top = 10
+    Width = 188
+    Lines.Strings = (
+      'Memo'
+    )
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object ButtonRun: TButton
+    Left = 30
+    Height = 60
+    Top = 580
+    Width = 188
+    Caption = 'Считать'
+    OnClick = ButtonRunClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Chart1: TChart
+    Left = 220
+    Height = 690
+    Top = 10
+    Width = 1550
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Marks.YIndex = 1
+        Minors = <>
+        Title.Caption = 'ррапрапр'
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1LineSeries1: TLineSeries
+      LinePen.Color = clRed
+    end
+  end
+  object ButtonChooseThePath: TButton
+    Left = 30
+    Height = 40
+    Top = 760
+    Width = 188
+    Caption = 'Сохранить как'
+    OnClick = ButtonChooseThePathClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object ButtonOpenFile: TButton
+    Left = 30
+    Height = 60
+    Top = 640
+    Width = 188
+    Caption = 'Открыть файл и считать'
+    OnClick = ButtonOpenFileClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object SaveToFile: TButton
+    Left = 30
+    Height = 60
+    Top = 700
+    Width = 188
+    Caption = 'Сохранить'
+    OnClick = ButtonSaveToFileClick
+    ParentFont = False
+    TabOrder = 5
+  end
+  object ButtonColorChange: TButton
+    Left = 220
+    Height = 31
+    Top = 700
+    Width = 184
+    Caption = 'Изменить цвет фона'
+    OnClick = ButtonColorChangeClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object EditFrequency: TEdit
+    Left = 270
+    Height = 28
+    Top = 760
+    Width = 40
+    ParentFont = False
+    TabOrder = 7
+    Text = '50'
+  end
+  object LabelEditFrequency: TLabel
+    Left = 230
+    Height = 20
+    Top = 740
+    Width = 148
+    Caption = 'Введите частоту (кГц)'
+    ParentColor = False
+    ParentFont = False
+  end
+  object SaveDialog: TSaveDialog
+    Filter = 'Текстовый файл (txt)|*txt'
+    left = 420
+    top = 700
+  end
+  object OpenDialog: TOpenDialog
+    Filter = 'Тестовый файл (txt)|*txt'
+    left = 510
+    top = 700
+  end
+  object ColorChange: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 600
+    top = 700
+  end
+end
